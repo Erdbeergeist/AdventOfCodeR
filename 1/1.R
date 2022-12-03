@@ -17,6 +17,8 @@ input %>%
   filter(!is.na(Calories)) %>% 
   select(Calories, Elf_number) %>% 
   group_by(Elf_number) %>% 
-  summarise(Total = sum(Calories)) %>% 
-  slice(which.max(Total)) %>% 
-  print()
+  summarise(Total = sum(Calories)) %T>%
+  {
+    slice(., which.max(Total)) %>% 
+    print()
+  }
