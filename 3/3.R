@@ -30,4 +30,4 @@ p2 <- input %>%
  
 p2 %>% 
   pull(Priority) %>% 
-  sum
+  sum()
